@@ -881,6 +881,95 @@
   }
 
   /* ══════════════════════════════════
+     SKILL PREVIEW — Aha Moments
+     ══════════════════════════════════ */
+  .skill-section {
+    background: var(--dark-bg);
+  }
+
+  .skill-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skill-card {
+    background: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .skill-card:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(57,255,20,0.08);
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+  }
+
+  .skill-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .skill-name {
+    font-family: var(--pixel);
+    font-size: 0.5rem;
+    color: var(--neon-green);
+    margin-bottom: 0.4rem;
+    line-height: 1.8;
+  }
+
+  .skill-desc {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-compare {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .skill-before {
+    font-family: var(--pixel);
+    font-size: 0.4rem;
+    color: var(--neon-red);
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--neon-red);
+    background: rgba(255,49,49,0.08);
+    text-decoration: line-through;
+    text-decoration-color: var(--neon-red);
+  }
+
+  .skill-arrow {
+    font-family: var(--pixel);
+    font-size: 0.4rem;
+    color: var(--neon-gold);
+  }
+
+  .skill-after {
+    font-family: var(--pixel);
+    font-size: 0.45rem;
+    color: var(--neon-green);
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--neon-green);
+    background: rgba(57,255,20,0.08);
+    text-shadow: 0 0 6px rgba(57,255,20,0.3);
+  }
+
+  /* ══════════════════════════════════
      MOBILE
      ══════════════════════════════════ */
   @media (max-width: 640px) {
@@ -936,6 +1025,17 @@
     }
 
     .timer-section { padding: 2.5rem 1.2rem; }
+
+    .skill-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.8rem;
+      padding: 1.2rem;
+    }
+
+    .skill-compare {
+      justify-content: center;
+    }
   }
 </style>
 </head>
@@ -1108,7 +1208,7 @@
         <div class="level-badge lv2">LV.2</div>
         <div class="level-info">
           <h3><span class="lv-label">LV.2</span> 아하 각성</h3>
-          <p>AI한테 말로 시켜서 엑셀 정리, 웹페이지 요약, 이미지 분석을 직접 해봄. "이게 된다고?!" 순간.</p>
+          <p>5시간 걸리던 엑셀을 30초에, 2주 야근 PPT를 10분에, 코딩 없이 웹사이트까지. "이게 된다고?!" 연타.</p>
           <span class="level-tag today">TODAY +3hr</span>
         </div>
       </div>
@@ -1130,6 +1230,85 @@
         <div class="xp-fill"></div>
       </div>
       <div class="xp-text">3시간 세션으로 LV.2 달성 가능</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SKILL PREVIEW — Aha Moments
+     ════════════════════════════════════ -->
+<section class="section skill-section">
+  <div class="container">
+    <div class="section-label">SKILL PREVIEW</div>
+    <div class="section-title">LV.2가 되면 이런 게 가능</div>
+
+    <div class="skill-grid">
+
+      <div class="skill-card">
+        <div class="skill-icon">&#x1F4CA;</div>
+        <div class="skill-content">
+          <div class="skill-name">엑셀 노가다 탈출</div>
+          <div class="skill-desc">"이 데이터 정리해줘" 한 마디면, 수천 행 엑셀이 깔끔하게 정리됨</div>
+          <div class="skill-compare">
+            <span class="skill-before">5시간 수작업</span>
+            <span class="skill-arrow">></span>
+            <span class="skill-after">30초</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">&#x1F4C1;</div>
+        <div class="skill-content">
+          <div class="skill-name">바탕화면 자동 정리</div>
+          <div class="skill-desc">파일 200개 널브러진 바탕화면, "종류별로 정리해줘" → 폴더별 자동 분류</div>
+          <div class="skill-compare">
+            <span class="skill-before">귀찮아서 만년 방치</span>
+            <span class="skill-arrow">></span>
+            <span class="skill-after">10초</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">&#x1F3A8;</div>
+        <div class="skill-content">
+          <div class="skill-name">PPT 자동 생성</div>
+          <div class="skill-desc">주제만 말하면 슬라이드 구성 + 내용 + 디자인까지. 상사 보고용 퀄리티.</div>
+          <div class="skill-compare">
+            <span class="skill-before">2주 야근</span>
+            <span class="skill-arrow">></span>
+            <span class="skill-after">10분</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">&#x1F310;</div>
+        <div class="skill-content">
+          <div class="skill-name">나만의 웹사이트 만들기</div>
+          <div class="skill-desc">코딩 1도 모르는데 "이런 페이지 만들어줘" → 진짜 작동하는 웹사이트 완성</div>
+          <div class="skill-compare">
+            <span class="skill-before">외주비 200만원</span>
+            <span class="skill-arrow">></span>
+            <span class="skill-after">10분 + 0원</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">&#x1F4D1;</div>
+        <div class="skill-content">
+          <div class="skill-name">100페이지 PDF 1분 요약</div>
+          <div class="skill-desc">규정집, 보고서, 논문... 읽기 싫은 문서를 던지면 핵심만 뽑아줌</div>
+          <div class="skill-compare">
+            <span class="skill-before">3시간 리딩</span>
+            <span class="skill-arrow">></span>
+            <span class="skill-after">1분</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
